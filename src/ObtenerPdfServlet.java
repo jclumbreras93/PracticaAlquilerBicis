@@ -126,7 +126,7 @@ public class ObtenerPdfServlet extends HttpServlet {
 
 		System.out.println("Nos conectamos a: " + servFTP);
 		String usuario = "rssperiodicos";
-		String clave = "jc12345&";
+		String clave = "*********";
 
 		cliente.connect(servFTP);
 		cliente.enterLocalPassiveMode();

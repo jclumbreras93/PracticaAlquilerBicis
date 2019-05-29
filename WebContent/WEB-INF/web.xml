@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>PracticaAlquilerBicisJuanCarlos</display-name>
+  <welcome-file-list>
+    <welcome-file>logueo.html</welcome-file>
+  </welcome-file-list>
+   <context-param>
+    <param-name>usuario2</param-name>
+    <param-value>Admin</param-value>
+  </context-param>
+	<servlet>
+		<servlet-name>crearSesion</servlet-name>
+		<servlet-class>CrearSesionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>crearSesion</servlet-name>
+		<url-pattern>/crearSes</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>cerrarSesion</servlet-name>
+		<servlet-class>CerrarSesionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cerrarSesion</servlet-name>
+		<url-pattern>/cerrarSes</url-pattern>
+	</servlet-mapping>
+	
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>LoguearServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/logueo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>reserva</servlet-name>
+    <servlet-class>BicicletasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reserva</servlet-name>
+    <url-pattern>/reservaBici</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>puntosAlquiler</servlet-name>
+    <servlet-class>ListaVisitasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>puntosAlquiler</servlet-name>
+    <url-pattern>/puntosAlq</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>confirmarReserva</servlet-name>
+    <servlet-class>ConfirmarReservaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>confirmarReserva</servlet-name>
+    <url-pattern>/confirmarRes</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>obtenerPdf</servlet-name>
+    <servlet-class>ObtenerPdfServlet</servlet-class>
+    <init-param>
+      <param-name>nombreFichero</param-name>
+      <param-value>tickets/ticket.txt</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>obtenerPdf</servlet-name>
+    <url-pattern>/obtenerPdf</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>enviarCorreo</servlet-name>
+    <servlet-class>EnviarCorreoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>enviarCorreo</servlet-name>
+    <url-pattern>/enviarCorreo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>confirmarCorreo</servlet-name>
+    <servlet-class>ConfirmarEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>confirmarCorreo</servlet-name>
+    <url-pattern>/confirmarCorreo</url-pattern>
+  </servlet-mapping>
+</web-app>
